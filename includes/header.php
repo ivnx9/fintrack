@@ -3,7 +3,7 @@
     <div class="topbar-left">
 
         <h2>
-            FINTRACK
+            <i class="fa-solid fa-chart-pie"></i> FINTRACK
         </h2>
 
     </div>
