@@ -4,6 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("FINTRACK System Loaded");
 
+    // Highlight active sidebar tab
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.sidebar-menu a');
+
+    navLinks.forEach(function(link) {
+        const linkPath = new URL(link.href).pathname;
+        if (currentPath.endsWith(linkPath) || currentPath.includes(linkPath.replace('..', ''))) {
+            link.classList.add('active');
+        }
+    });
+
     // Auto close alert messages
     const alerts = document.querySelectorAll(".alert");
 
